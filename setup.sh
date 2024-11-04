@@ -7,22 +7,28 @@ else
   SUDO=""
 fi
 
+
+
+# Update the package list and install other packages via apt
+echo "Updating package list and installing other packages..."
+$SUDO apt update -y
+$SUDO apt install -y clangd unzip clang ripgrep stow build-essential
+
+
 # Install Homebrew if it is not already installed
 if ! command -v brew &> /dev/null; then
   echo "Installing Homebrew..."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   # Add Homebrew to PATH for the current session
+  echo >> /root/.bashrc
+  echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /root/.bashrc
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)" 
   export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 fi
 
 # Use Homebrew to install Neovim
 echo "Installing Neovim via Homebrew..."
 brew install neovim
-
-# Update the package list and install other packages via apt
-echo "Updating package list and installing other packages..."
-$SUDO apt update -y
-$SUDO apt install -y clangd unzip clang ripgrep stow
 
 # Ensure the .config directory exists
 CONFIG_DIR="$HOME/.config"
