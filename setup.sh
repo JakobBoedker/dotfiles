@@ -13,7 +13,7 @@ $SUDO apt update -y
 
 # Install Neovim, clangd, unzip, clang, ripgrep, and stow
 echo "Installing packages..."
-$SUDO apt install -y neovim clangd unzip clang ripgrep stow
+$SUDO apt install -y neovim clangd unzip clang ripgrep make stow
 
 # Check if all packages were installed successfully
 if [[ $? -ne 0 ]]; then
