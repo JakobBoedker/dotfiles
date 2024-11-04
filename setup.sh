@@ -20,6 +20,7 @@ if ! command -v brew &> /dev/null; then
   echo "Installing Homebrew..."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   # Add Homebrew to PATH for the current session
+  bash
   echo >> /root/.bashrc
   echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /root/.bashrc
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)" 
