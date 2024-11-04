@@ -7,19 +7,22 @@ else
   SUDO=""
 fi
 
-# Update the package list
-echo "Updating package list..."
-$SUDO apt update -y
-
-# Install Neovim, clangd, unzip, clang, ripgrep, and stow
-echo "Installing packages..."
-$SUDO apt install -y neovim clangd unzip clang ripgrep stow
-
-# Check if all packages were installed successfully
-if [[ $? -ne 0 ]]; then
-  echo "Failed to install one or more packages."
-  exit 1
+# Install Homebrew if it is not already installed
+if ! command -v brew &> /dev/null; then
+  echo "Installing Homebrew..."
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  # Add Homebrew to PATH for the current session
+  export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 fi
+
+# Use Homebrew to install Neovim
+echo "Installing Neovim via Homebrew..."
+brew install neovim
+
+# Update the package list and install other packages via apt
+echo "Updating package list and installing other packages..."
+$SUDO apt update -y
+$SUDO apt install -y clangd unzip clang ripgrep stow
 
 # Ensure the .config directory exists
 CONFIG_DIR="$HOME/.config"
@@ -53,16 +56,8 @@ if [[ -n "$WSL_DISTRO_NAME" ]]; then
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
   nvm install --lts
 else
-  echo "Non-WSL system detected. Installing Node.js via package manager..."
+  echo "Non-WSL system detected. Installing Node.js via apt..."
   $SUDO apt install -y nodejs npm
 fi
-
-# Open Neovim to trigger Lazy package manager installation of plugins
-echo "Opening Neovim to install plugins using Lazy..."
-nvim --headless "+Lazy! sync" +qa
-
-# Install Mason package 'pyright'
-echo "Installing Mason package 'pyright'..."
-nvim --headless -c 'MasonInstall pyright' -c 'q'
 
 echo "Installation and setup complete."
