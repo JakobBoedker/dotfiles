@@ -15,6 +15,11 @@ $SUDO apt update -y
 $SUDO apt install -y clangd unzip clang ripgrep stow build-essential curl
 
 
+# Use Homebrew to install Neovim
+echo "Installing Neovim via Homebrew..."
+brew install neovim
+
+
 # Ensure the .config directory exists
 CONFIG_DIR="$HOME/.config"
 if [[ ! -d "$CONFIG_DIR" ]]; then
