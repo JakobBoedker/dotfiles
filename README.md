@@ -6,15 +6,24 @@ dotfiles repo to keep track of my configs and to easy install on new machines us
 
 right now it is only usable with debain based systems that use apt as package manager and brew
 
+start by installing curl and git
+
+```bash
+
+sudo apt install curl git
+
+```
+
 ```bash
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 ```
 
+after brew is installed run these commands
+
 ```bash
 
-after brew is installed run these commands
  echo >> /root/.bashrc
     echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /root/.bashrc
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
