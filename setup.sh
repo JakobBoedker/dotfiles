@@ -12,7 +12,7 @@ fi
 # Update the package list and install other packages via apt
 echo "Updating package list and installing other packages..."
 $SUDO apt update -y
-$SUDO apt install -y clangd unzip clang ripgrep stow build-essential curl
+$SUDO apt install -y clangd unzip clang ripgrep stow build-essential curl python3.12-venv
 
 
 # Use Homebrew to install Neovim
