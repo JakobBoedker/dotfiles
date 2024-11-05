@@ -32,7 +32,7 @@ echo -e "README.md\n.git\n.gitignore" > "$STOW_DIR/.stow-local-ignore"
 # Check if the stow directory exists
 if [[ -d "$STOW_DIR" ]]; then
   echo "Running stow in $STOW_DIR..."
-  cd "$STOW_DIR" && stow -v --target="$HOME" */
+  cd "$STOW_DIR" && stow -v --target="$HOME" .
   echo "Stow completed."
 else
   echo "Directory $STOW_DIR does not exist. Please create it or change STOW_DIR variable in the script."
