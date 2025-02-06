@@ -19,13 +19,14 @@
 
 ### what to run with Stow
 
-- hyprpaper
-- backgrounds
-- kitty
+- hyprpaper [x]
+- backgrounds [x]
+- kitty [x]
 - starship ?
-- waybar
-- hyprlock
-- hyprmocha
-- hyrpland conf
-- powermenu (rofi)
-- 
+- waybar  [x]
+- hyprlock [x]
+- hyprmocha [x]
+- hyrpland conf [x]
+- powermenu (rofi) [x]
+- zsh
+- tmux
