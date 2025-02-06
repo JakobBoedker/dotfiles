@@ -6,16 +6,15 @@
 - hyprpaper
 - waybar (remove : rm -rf ~/.config/waybar if it is there)
 - rofi
-- yay
-- nerd font (jetbriansmono)
-- starship
-- zen
 - nwg-look
-- catppuccin-gtk-theme-mocha
-- hyprlock (remove rm -rf ~/.config/hypr/hyprlock.conf if its there)
 - zsh
 
-
+### after you install yay
+- hyprlock (remove rm -rf ~/.config/hypr/hyprlock.conf if its there)
+- yay
+- nerd font (jetbriansmono)
+- catppuccin-gtk-theme-mocha
+- starship
 
 ### what to run with Stow
 
