@@ -8,25 +8,13 @@
 - rofi
 - nwg-look
 - zsh
+- tmux
+
 
 ### after you install yay
-- hyprlock (remove rm -rf ~/.config/hypr/hyprlock.conf if its there)
 - yay
+- hyprlock (remove rm -rf ~/.config/hypr/hyprlock.conf if its there)
 - nerd font (jetbriansmono)
-- catppuccin-gtk-theme-mocha
+- catppuccin-gtk-theme-mocha [!> does not exist anymore[!WARNING]]
 - starship
 - rofi-power-menu
-
-### what to run with Stow
-
-- hyprpaper [x]
-- backgrounds [x]
-- kitty [x]
-- starship ?
-- waybar  [x]
-- hyprlock [x]
-- hyprmocha [x]
-- hyrpland conf [x]
-- powermenu (rofi) [x]
-- zsh
-- tmux
