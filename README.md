@@ -15,6 +15,7 @@
 - nerd font (jetbriansmono)
 - catppuccin-gtk-theme-mocha
 - starship
+- rofi-power-menu
 
 ### what to run with Stow
 
