@@ -1,0 +1,19 @@
+[default_session]
+disable_startup_command = true
+
+
+[[session]]
+name = "Static_boot.dev"
+path = "~/workspace/github.com/jakobboedker/StaticSite_Generator/"
+startup_command = "ls -a"
+
+
+[[session]]
+name = "dotfiles"
+path = "~/dotfiles/"
+startup_command = "ls -a"
+
+
+
+
+
