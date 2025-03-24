@@ -22,3 +22,5 @@
 - banana-cursor
 - zen-browser-bin
 - vesktop
+- zoxide
+- yazi
