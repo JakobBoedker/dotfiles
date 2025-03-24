@@ -11,6 +11,10 @@ source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
+
+#generate random pokemon on startup
+pokemon-colorscripts -r --no-title
+
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
 zinit light-mode for \
@@ -66,9 +70,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 #alias
 alias ls='ls --color'
 alias nv='nvim'
-alias c='clear'
-alias dot='cd ~/dotfiles/'
-alias proj='cd ~/workspace/github.com/jakobboedker/'
+alias c='clear && pokemon-colorscripts -r --no-title'
 
 
 

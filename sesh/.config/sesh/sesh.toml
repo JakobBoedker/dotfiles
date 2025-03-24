@@ -13,6 +13,16 @@ name = "dotfiles"
 path = "~/dotfiles/"
 startup_command = "ls -a"
 
+[[session]]
+name = "constelia"
+path = "~/x/"
+startup_command = "ls -a"
+
+[[session]]
+name = "cpu & GPU temp"
+path = "~"
+startup_command = "watch -n 2 sensors"
+
 
 
 
